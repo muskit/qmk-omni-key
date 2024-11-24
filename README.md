@@ -48,8 +48,6 @@ If you do want to set it to a `QK_KB` constant for VIA, check your definition JS
 
 Thus, I had set my `KC_OMNI` variable to `QK_KB_7`.
 
-Also don't forget to add your keycode to the array as seen in the above JSON excerpt.
-
 ### 2. Update your _keymap.c_
 
 In your _keymap.c_, include _omni.h_.
