@@ -2,6 +2,8 @@
 
 Custom key function that combines playback controls and mute into a single command. Make that knob button more than just the mute button.
 
+![demohq-ezgif com-optimize](https://github.com/user-attachments/assets/9ea2e0b5-28e6-4496-b11c-2e440a044a4d)
+
 ## Usage
 
 - TAP: Play/Pause
