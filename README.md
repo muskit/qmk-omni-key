@@ -2,12 +2,12 @@
 
 Custom key function that combines playback controls and mute into a single command. Make that knob button more than just the mute button.
 
-![demohq-ezgif com-optimize](https://github.com/user-attachments/assets/9ea2e0b5-28e6-4496-b11c-2e440a044a4d)
+![demo](https://github.com/user-attachments/assets/9ea2e0b5-28e6-4496-b11c-2e440a044a4d)
 
 ## Usage
 
-- TAP: Play/Pause
 - HOLD: Mute
+- TAP: Play/Pause
 - TAPx2: Next Track
 - TAPx3: Prev Track
 
@@ -27,7 +27,7 @@ enum msk_keycodes {
 };
 ```
 
-`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_7`, which is the next available custom command for Monsgeek M1W's VIA setup. Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
+`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_7`, which is the constant of the next available custom command for Monsgeek M1W's VIA setup. Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
 
 If you do want to set it to a `QK_KB` constant for VIA, check your definition JSON to see what index the keycode will be at when you add it. For my Monsgeek M1W, adding the keycode would result in the JSON's `customKeycodes` array being the following:
 
