@@ -1,10 +1,12 @@
 # Omni-key for QMK
 
-Custom key function that combines playback controls and mute into a single command. Make that knob button more than just the mute button.
+Custom key function that combines playback controls and mute into a single command. Make that knob button more than just the mute button!
 
 ![demo](https://github.com/user-attachments/assets/9ea2e0b5-28e6-4496-b11c-2e440a044a4d)
 
 ## Usage
+
+If you've ever used wired headphones with a play/pause button on your phone, this will be familiar to you.
 
 - HOLD: Mute
 - TAP: Play/Pause
@@ -27,7 +29,7 @@ enum msk_keycodes {
 };
 ```
 
-`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_7`, which is the constant of the next available custom command for Monsgeek M1W's VIA setup. Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
+`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_7`, which is the constant of the next available custom command for Monsgeek M1W's VIA code. Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
 
 If you do want to set it to a `QK_KB` constant for VIA, check your definition JSON to see what index the keycode will be at when you add it. For my Monsgeek M1W, adding the keycode would result in the JSON's `customKeycodes` array being the following:
 
@@ -46,15 +48,17 @@ If you do want to set it to a `QK_KB` constant for VIA, check your definition JS
 
 Thus, I had set my `KC_OMNI` variable to `QK_KB_7`.
 
-Also don't forget to add your keycode to the array; refer to my example above if needed.
+Also don't forget to add your keycode to the array as seen in the above JSON excerpt.
 
 ### 2. Update your _keymap.c_
 
-In your _keymap.c_, include _omni.h_. Make sure that you're including it properly relative to the repo/submodule if needed.
+In your _keymap.c_, include _omni.h_.
 
 ```c
 #include "./omni.h"
 ```
+
+If accessing this repo via cloning/submodule, make sure you include it properly.
 
 ```c
 #include "./qmk-omni-key/omni.h"
