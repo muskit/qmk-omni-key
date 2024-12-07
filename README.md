@@ -8,10 +8,10 @@ Custom key function that combines playback controls and mute into a single comma
 
 If you've ever used wired headphones with a play/pause button on your phone, this will be familiar to you.
 
-- HOLD: Mute
 - TAP: Play/Pause
 - TAPx2: Next Track
 - TAPx3: Prev Track
+- HOLD: Mute
 
 ## Add to your keymap
 
@@ -65,7 +65,7 @@ If accessing this repo via cloning/submodule, make sure you include it properly.
 ```
 
 > [!IMPORTANT]  
-> _omni.h_ defines the `process_record_user` function in order to intercept the omni-key and work as it does. If your _keymap.c_ already defines that function, you may need to make code changes so that it calls the function in _omni.h_ properly. This will be left as an exercise for the user.
+> _omni.h_ defines the `process_record_user` function in order to intercept the omni-key and work as it does. If your _keymap.c_ already defines that function, you may need to make changes to *keymap.c* so that it runs the code from that function in _omni.h_ properly. This will be left as an exercise for the user.
 
 Feel free to modify your default mapping by setting a key to `KC_OMNI`.
 
