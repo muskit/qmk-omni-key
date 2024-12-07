@@ -25,28 +25,30 @@ In _omni.h_, you'll find the following block.
 
 ```C
 enum msk_keycodes {
-    KC_OMNI = QK_KB_7,
+    KC_OMNI = QK_KB_9,
 };
 ```
 
-`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_7`, which is the constant of the next available custom command for Monsgeek M1W's VIA code. Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
+`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_9`, which is the constant of the next available custom command for [Monsgeek M1W's QMK VIA code](https://github.com/monsgeek/qmk_firmware/tree/wireless/keyboards/monsgeek/m1w). Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
 
 If you do want to set it to a `QK_KB` constant for VIA, check your definition JSON to see what index the keycode will be at when you add it. For my Monsgeek M1W, adding the keycode would result in the JSON's `customKeycodes` array being the following:
 
 ```JSON
 "customKeycodes": [
-        {"name": "BT DEV1","title": "BT Device 1","shortName": "DEV1"},
-        {"name": "BT DEV2","title": "BT Device 2","shortName": "DEV2"},
-        {"name": "BT DEV3","title": "BT Device 3","shortName": "DEV3"},
-        {"name": "BT DEV4","title": "BT Device 4","shortName": "DEV4"},
-        {"name": "BT DEV5","title": "BT Device 5","shortName": "DEV5"},
-        {"name": "2.4G","title": "2.4G","shortName": "DEV 2.4G"},
-        {"name": "USB","title": "USB","shortName": "DEV USB"},
-        {"name": "OMNI","title": "Media Omni-key","shortName": "OMNI"} // my added line //
-    ],
+    { "name": "USB", "title": "USB", "shortName": "DEV USB" },
+    { "name": "BT DEV1", "title": "BT Device 1", "shortName": "DEV1" },
+    { "name": "BT DEV2", "title": "BT Device 2", "shortName": "DEV2" },
+    { "name": "BT DEV3", "title": "BT Device 3", "shortName": "DEV3" },
+    { "name": "BT DEV4", "title": "BT Device 4", "shortName": "DEV4" },
+    { "name": "BT DEV5", "title": "BT Device 5", "shortName": "DEV5" },
+    { "name": "2.4G", "title": "2.4G", "shortName": "DEV 2.4G" },
+    { "name": "BATQ", "title": "Battery Check", "shortName": "BATQ" },
+    { "name": "WASD", "title": "Swap WASD & Arrow Keys", "shortName": "WASD" },
+    { "name": "OMNI", "title": "Media Omni-key", "shortName": "OMNI" } // MY ADDED LINE //
+],
 ```
 
-Thus, I had set my `KC_OMNI` variable to `QK_KB_7`.
+Thus, I had set my `KC_OMNI` variable to `QK_KB_9`.
 
 ### 2. Update your _keymap.c_
 
