@@ -29,9 +29,9 @@ enum msk_keycodes {
 };
 ```
 
-`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_9`, which is the constant of the next available custom command for [Monsgeek M1W's QMK VIA code](https://github.com/monsgeek/qmk_firmware/tree/wireless/keyboards/monsgeek/m1w). Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
+`KC_OMNI` is the variable for referencing the omni-key in code. Here, it is set to `QK_KB_9`, which is the constant of the next available custom keycode for [Monsgeek M1W's QMK VIA code](https://github.com/MonsGeek/qmk_firmware/blob/b7e728715166f41e195197b261ae40cef8e20eb8/keyboards/monsgeek/m1w/keyboard.json#L33). Substitute this constant for something else, like a another custom command (`QK_KB_n` where `n` is an integer) or `SAFE_RANGE`. **Make sure to adapt to your current keymap.**
 
-If you do want to set it to a `QK_KB` constant for VIA, check your definition JSON to see what index the keycode will be at when you add it. For my Monsgeek M1W, adding the keycode would result in the JSON's `customKeycodes` array being the following:
+If you do want to set it to a `QK_KB` keycode for VIA, check your definition JSON to see what index the keycode will be at when you add it. For my [Monsgeek M1W with QMK firmware](https://github.com/monsgeek/qmk_firmware/tree/wireless/keyboards/monsgeek/m1w), adding the keycode would result in the JSON's `customKeycodes` array being the following:
 
 ```JSON
 "customKeycodes": [
@@ -65,7 +65,7 @@ If accessing this repo via cloning/submodule, make sure you include it properly.
 ```
 
 > [!IMPORTANT]  
-> _omni.h_ defines the `process_record_user` function in order to intercept the omni-key and work as it does. If your _keymap.c_ already defines that function, you may need to make changes to *keymap.c* so that it runs the code from that function in _omni.h_ properly. This will be left as an exercise for the user.
+> _omni.h_ defines the `process_record_user` function in order to intercept the omni-key and work as it does. If your _keymap.c_ already defines that function, you may need to make changes to _keymap.c_ so that it runs the code from that function in _omni.h_ properly. This will be left as an exercise for the user.
 
 Feel free to modify your default mapping by setting a key to `KC_OMNI`.
 
